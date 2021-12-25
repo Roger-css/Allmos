@@ -92,6 +92,7 @@ ul {
 /* end global rules */
 /* start header */
 .header {
+  z-index: 1;
   background-color: white;
   position: relative;
   box-shadow: 0 0 10px #ddd;
@@ -108,15 +109,54 @@ ul {
 .header .container .main-nav {
   display: flex;
 }
-.header .container .main-nav > li:hover .mega-menu {
-  top: calc(100% + 1px);
-  opacity: 1;
-  z-index: 3;
-}
 @media (max-width: 767px) {
   .header .container .main-nav {
     margin: auto;
   }
+}
+.header button {
+  background-color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+.header button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: var(--main-color);
+  height: 4px;
+  width: 100%;
+  transition: 0.3s;
+}
+.header button a {
+  border: none;
+  padding: 0 30px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: black;
+  height: 72px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.header button:hover::before {
+  left: 0;
+}
+.header li button:hover {
+  background-color: #fafafa;
+}
+.header li button:hover a {
+  color: var(--main-color);
+}
+#activemega {
+  top: calc(100% + 1px);
+  opacity: 1;
+  z-index: 3;
+  display: flex;
 }
 .header .container .main-nav > li > a {
   padding: 0 30px;
@@ -131,7 +171,8 @@ ul {
   transition: 0.3s;
 }
 @media (max-width: 767px) {
-  .header .container .main-nav > li > a {
+  .header .container .main-nav > li > a,
+  .header button a {
     padding: 0 10px;
     font-size: 14px;
     height: 30px;
@@ -173,16 +214,16 @@ ul {
 .mega-menu {
   padding: 30px;
   width: 100%;
-  display: flex;
   gap: 40px;
   position: absolute;
   background-color: white;
-  z-index: -1;
+  display: none;
+  z-index: -3;
   top: calc(100% + 50px);
   left: 0;
   opacity: 0;
   border-bottom: 3px solid var(--main-color);
-  transition: top 0.3s, opacity 0.3s;
+  transition: 0.3;
 }
 .mega-menu .links {
   min-width: 250px;
@@ -294,6 +335,7 @@ ul {
   }
 }
 .landing img {
+  margin-top: 40px;
   width: 600px;
   animation: up-and-down 5s linear infinite;
   position: relative;
@@ -836,12 +878,13 @@ ul {
   height: 30px;
   position: relative;
 }
-.the-progress span {
+.our-skills .the-progress span {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   background-color: var(--main-color);
+  transition: 0.3s linear;
 }
 @media (max-width: 991px) {
   .our-skills img {
@@ -1304,6 +1347,12 @@ ul {
   font-size: 50px;
   font-weight: bold;
   margin: 10px auto;
+}
+#cc {
+  position: relative;
+}
+#cc::after {
+  content: "k";
 }
 .stats i {
   display: block;

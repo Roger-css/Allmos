@@ -20,7 +20,7 @@
                 <li><a href="#articles" id="article" >Article</a></li>
                 <li><a href="#gallary" id="gallery">Gallery</a></li>
                 <li><a href="#Features" id="features">Features</a></li>
-                <li><a href="#">Other links</a>
+                <li><button class="cc"><a href="#">Other links</a></button>
                     <div class="mega-menu">
                         <div class="image">
                           <img src="img/megamenu.png" alt="" />
@@ -550,20 +550,20 @@
         <div class="skills">
           <div class="skill">
             <h3>HTML <span>80%</span></h3>
-            <div class="the-progress"><span style="width: 80%;"></span></div>
+            <div class="the-progress"><span style="width: 0;" data-width = "80%"></span></div>
           </div>
           <div class="skill">
             <h3>CSS <span>85%</span></h3>
-            <div class="the-progress"><span style="width: 85%;"></span></div>
+            <div class="the-progress"><span style="width: 0;" data-width="85%"></span></div>
           </div>
           
           <div class="skill">
             <h3>javaScript <span>70%</span></h3>
-            <div class="the-progress"><span style="width: 70%;"></span></div>
+            <div class="the-progress"><span style="width: 0;" data-width="70%"></span></div>
           </div>
           <div class="skill">
             <h3>python <span>80%</span></h3>
-            <div class="the-progress"><span style="width: 80%;"></span></div>
+            <div class="the-progress"><span style="width: 0;" data-width="80%"></span></div>
           </div>
         </div>
       </div>
@@ -613,19 +613,19 @@
         <div class="info">
           <div class="time">
             <div class="unit">
-              <span>16</span>
+              <span class="days"></span>
               <span>days</span>
             </div>
             <div class="unit">
-              <span>05</span>
+              <span class="hours"></span>
               <span>hours</span>
             </div>
             <div class="unit">
-              <span>33</span>
+              <span class="min"></span>
               <span>minutes</span>
             </div>
             <div class="unit">
-              <span>47</span>
+              <span class="sec"></span>
               <span>seconds</span>
             </div>
           </div>
@@ -725,22 +725,22 @@
       <div class="container">
         <div class="box">
           <i class="far fa-user fa-2x fa-fw"></i>
-          <span class="number">300</span>
+          <span class="number" data-number="300">0</span>
           <span class="text">Clients</span>
         </div>
         <div class="box">
           <i class="fas fa-code fa-2x fa-fw"></i>
-          <span class="number">400</span>
+          <span class="number" data-number="400">0</span>
           <span class="text">Projects</span>
         </div>
         <div class="box">
           <i class="fas fa-globe-asia fa-2x fa-fw"></i>
-          <span class="number">12</span>
+          <span class="number" data-number="12">0</span>
           <span class="text">Countries</span>
         </div>
         <div class="box">
           <i class="far fa-money-bill-alt fa-2x fa-fw"></i>
-          <span class="number">500K</span>
+          <span class="number" id="cc" data-number="500">0</span>
           <span class="text">Money</span>
         </div>
       </div>
@@ -826,5 +826,6 @@
       </div>
       <p>Made with &lt;3 by Mustafa </p>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
