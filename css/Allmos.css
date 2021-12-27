@@ -985,6 +985,17 @@ ul {
 .events .container .info {
   flex: 1;
 }
+.whole-time {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+@media (max-width: 360px) {
+  .whole-time {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .events .time {
   display: flex;
   justify-content: center;
@@ -1050,6 +1061,7 @@ ul {
   display: flex;
   gap: 10px;
 }
+
 .events .sub form input[type="email"] {
   flex: 1;
   padding: 20px;
